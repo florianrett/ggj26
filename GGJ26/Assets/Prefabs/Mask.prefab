@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: fae50adb2bd08e84088a555c4bb295de, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9206a6eb5bab49746b0807adb656bd01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -142,11 +142,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mask
   variant:
-    hair: 0
-    eyes: 1
-    ears: 1
-    nose: 3
-    mouth: 3
+    eyes: 3
+    ears: 2
+    nose: 0
+    mouth: 1
   maskView: {fileID: 3443591558166720196}
 --- !u!114 &3443591558166720196
 MonoBehaviour:
@@ -162,7 +161,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MaskVariations
   earsSprite: {fileID: 8354428890842756722}
   eyesSprite: {fileID: 4280275488010742974}
-  hairSprite: {fileID: 8663131660763822280}
   mouthSprite: {fileID: 6441113947699925833}
   noseSprite: {fileID: 1709592058565576139}
   earVariations:
@@ -175,8 +173,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d78b2ddf71a9b314e8a891348a5ab3e8, type: 3}
   - {fileID: 21300000, guid: 45c93b28a9df65f4491f6658a99f9cee, type: 3}
   - {fileID: 21300000, guid: 5ca518e006cb03f46a9a5d63f2c13eba, type: 3}
-  hairVariations:
-  - {fileID: 0}
   mouthVariations:
   - {fileID: 21300000, guid: 52186acddf77bff40b676abcac1df30d, type: 3}
   - {fileID: 21300000, guid: 9206a6eb5bab49746b0807adb656bd01, type: 3}
@@ -359,7 +355,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 7250990cebac9f843a399633c50eab55, type: 3}
+  m_Sprite: {fileID: 21300000, guid: efe3d4a3bb75c114d8f3b2129b47b7b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -450,7 +446,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: e5621129fd6ad5c45ae7cda18a3a9ac6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dcd17ef958afad246888df28e63354cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -541,7 +537,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: d78b2ddf71a9b314e8a891348a5ab3e8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ca518e006cb03f46a9a5d63f2c13eba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

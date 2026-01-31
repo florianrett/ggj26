@@ -183,6 +183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogButton
   dialogOption: 0
+  textMesh: {fileID: 1997993606532046941}
+  content: 
 --- !u!1 &8627813097229607034
 GameObject:
   m_ObjectHideFlags: 0

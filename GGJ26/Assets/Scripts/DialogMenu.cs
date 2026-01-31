@@ -2,7 +2,6 @@ using UnityEngine;
 
 public enum DialogOptions
 {
-    Hair,
     Eyes,
     Ears,
     Nose,
@@ -10,8 +9,8 @@ public enum DialogOptions
     Any1,
     Any2,
     Any3,
-    Any4,
-    All
+    All,
+    Exit
 }
 
 public class DialogMenu : MonoBehaviour

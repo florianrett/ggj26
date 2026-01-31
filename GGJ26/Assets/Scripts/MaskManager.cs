@@ -5,10 +5,9 @@ using UnityEngine;
 public class MaskManager : MonoBehaviour
 {
     [SerializeField] private GameObject maskPrefab;
-    
+
     // Remaining available mask variants
-    [SerializeField]
-    private List<MaskVariant> remainingVariants;
+    [SerializeField] private List<MaskVariant> remainingVariants;
 
     void Awake()
     {
@@ -19,42 +18,39 @@ public class MaskManager : MonoBehaviour
     {
         remainingVariants.Clear();
 
-        HairVariants hair = HairVariants.Variant1;
-        while (hair != HairVariants.MAX_VALUE)
+        EyeVariants eyes = EyeVariants.Variant1;
+        while (eyes != EyeVariants.MAX_VALUE)
         {
-            EyeVariants eyes = EyeVariants.Variant1;
-            while (eyes != EyeVariants.MAX_VALUE)
+            EarVariants ears = EarVariants.Variant1;
+            while (ears != EarVariants.MAX_VALUE)
             {
-                EarVariants ears = EarVariants.Variant1;
-                while (ears != EarVariants.MAX_VALUE)
+                NoseVariants nose = NoseVariants.Variant1;
+                while (nose != NoseVariants.MAX_VALUE)
                 {
-                    NoseVariants nose = NoseVariants.Variant1;
-                    while (nose != NoseVariants.MAX_VALUE)
+                    MouthVariants mouth = MouthVariants.Variant1;
+                    while (mouth != MouthVariants.MAX_VALUE)
                     {
-                        MouthVariants mouth = MouthVariants.Variant1;
-                        while (mouth != MouthVariants.MAX_VALUE)
+                        MaskVariant currentVariant = new MaskVariant
                         {
-                            MaskVariant currentVariant = new MaskVariant
-                            {
-                                hair = hair,
-                                eyes = eyes,
-                                ears = ears,
-                                nose = nose,
-                                mouth = mouth
-                            };
+                            eyes = eyes,
+                            ears = ears,
+                            nose = nose,
+                            mouth = mouth
+                        };
 
-                            remainingVariants.Add(currentVariant);
-                            // Debug.Log("Adding mask variant" + hair + eyes + ears + nose + mouth);
+                        remainingVariants.Add(currentVariant);
+                        // Debug.Log("Adding mask variant" + hair + eyes + ears + nose + mouth);
 
-                            mouth += 1;
-                        }
-                        nose += 1;
+                        mouth += 1;
                     }
-                    ears += 1;
+
+                    nose += 1;
                 }
-                eyes += 1;
+
+                ears += 1;
             }
-            hair += 1;
+
+            eyes += 1;
         }
     }
 
@@ -66,11 +62,11 @@ public class MaskManager : MonoBehaviour
             Debug.LogError("No mask available!");
             return null;
         }
-        
+
         int randomIndex = UnityEngine.Random.Range(0, remainingVariants.Count);
         MaskVariant variant = remainingVariants[randomIndex];
         remainingVariants.RemoveAt(randomIndex);
-        
+
         GameObject mask = Instantiate(maskPrefab);
         maskPrefab.GetComponent<Mask>().SetVariant(variant);
 

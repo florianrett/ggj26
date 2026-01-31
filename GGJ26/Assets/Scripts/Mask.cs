@@ -1,12 +1,6 @@
 using System;
 using UnityEngine;
 
-public enum HairVariants
-{
-    Variant1,
-    [InspectorName(null)]
-    MAX_VALUE
-}
 
 public enum EyeVariants
 {
@@ -51,7 +45,6 @@ public enum MouthVariants
 [Serializable]
 public struct MaskVariant
 {
-    public HairVariants hair;
     public EyeVariants eyes;
     public EarVariants ears;
     public NoseVariants nose;
@@ -60,8 +53,6 @@ public struct MaskVariant
     public int CountMatchingFeatures(MaskVariant otherMask)
     {
         int count = 0;
-        // if (otherMask.hair == hair)
-        //     count++;
         if (otherMask.eyes == eyes)
             count++;
         if (otherMask.ears == ears)
