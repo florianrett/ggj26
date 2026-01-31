@@ -9,7 +9,11 @@ public class GameMode : MonoBehaviour
     [SerializeField] private DialogMenu dialogMenu;
     [SerializeField] private ScoreBoard scoreBoard;
     [SerializeField] private Button roomButtonRight; 
-    [SerializeField] private Button roomButtonLeft; 
+    [SerializeField] private Button roomButtonLeft;
+    [SerializeField] private GameObject tutorial;
+    [SerializeField] private GameObject victoryScreen;
+    [SerializeField] private GameObject gameOverScreen;
+    
     [SerializeField] private MaskManager maskManager;
 
     [SerializeField] private MaskVariant playerMask;
@@ -43,6 +47,9 @@ public class GameMode : MonoBehaviour
         roomButtonRight.onClick.AddListener(delegate { ShowRoom(1); });
         ShowRoom(0);
         dialogMenu.gameObject.SetActive(false);
+        victoryScreen.SetActive(false);
+        gameOverScreen.SetActive(false);
+        tutorial.SetActive(true);
     }
 
     public void ShowRoom(int room)
@@ -131,7 +138,13 @@ public class GameMode : MonoBehaviour
             case DialogOptions.Any3:
                 return playerMask.CountMatchingFeatures(npcMask) >= 3;
             case DialogOptions.All:
-                return playerMask.CountMatchingFeatures(npcMask) >= 4;
+                if (playerMask.CountMatchingFeatures(npcMask) >= 4)
+                {
+                    victoryScreen.SetActive(true);
+                    return true;
+                }
+
+                return false;
         }
         
         Debug.LogError("Should be unreachable");
@@ -152,5 +165,10 @@ public class GameMode : MonoBehaviour
     {
         score += value;
         scoreBoard.SetScore(score, value, true);
+
+        if (score >= 100)
+        {
+            gameOverScreen.SetActive(true);
+        }
     }
 }

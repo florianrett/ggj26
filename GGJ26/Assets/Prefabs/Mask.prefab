@@ -142,8 +142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mask
   variant:
-    eyes: 3
-    ears: 1
+    eyes: 1
+    ears: 0
     nose: 1
     mouth: 2
   maskView: {fileID: 3443591558166720196}
@@ -446,7 +446,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: e5621129fd6ad5c45ae7cda18a3a9ac6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 032e89d5c98e4054db67417b001073d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -537,7 +537,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 5ca518e006cb03f46a9a5d63f2c13eba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d78b2ddf71a9b314e8a891348a5ab3e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

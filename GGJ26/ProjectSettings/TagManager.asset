@@ -50,5 +50,11 @@ TagManager:
   - name: Score
     uniqueID: 1266743427
     locked: 0
+  - name: Endscreens
+    uniqueID: 1626341261
+    locked: 0
+  - name: Fullscreen Fade
+    uniqueID: 251857309
+    locked: 0
   m_RenderingLayers:
   - Default
