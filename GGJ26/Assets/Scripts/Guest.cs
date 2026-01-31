@@ -9,7 +9,7 @@ public class Guest : MonoBehaviour
     
     // The mask script associated with this guest
     private Mask mask;
-    
+
     private void OnMouseDown()
     {
         // ignore mouse when it is hovering UI
@@ -22,6 +22,10 @@ public class Guest : MonoBehaviour
 
     public void SetMask(GameObject maskObject)
     {
+        // Delete a previously attached mask
+        if (maskLocation.transform.childCount > 0)
+            Destroy(maskLocation.transform.GetChild(0).gameObject);
+        
         maskObject.transform.SetParent(maskLocation.transform, false);
         mask = maskObject.GetComponent<Mask>();
     }

@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 025f647e1aac6a74a9ceeddff5b23c17, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9206a6eb5bab49746b0807adb656bd01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -142,10 +142,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mask
   variant:
-    eyes: 1
-    ears: 0
-    nose: 1
-    mouth: 2
+    eyes: 3
+    ears: 2
+    nose: 0
+    mouth: 1
   maskView: {fileID: 3443591558166720196}
 --- !u!114 &3443591558166720196
 MonoBehaviour:
@@ -355,7 +355,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 7b7a10f9b12d5014fb9f5269d71c0f98, type: 3}
+  m_Sprite: {fileID: 21300000, guid: efe3d4a3bb75c114d8f3b2129b47b7b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -446,7 +446,11 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
+<<<<<<< .mine
   m_Sprite: {fileID: 21300000, guid: 032e89d5c98e4054db67417b001073d3, type: 3}
+=======
+  m_Sprite: {fileID: 21300000, guid: dcd17ef958afad246888df28e63354cf, type: 3}
+>>>>>>> .theirs
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
