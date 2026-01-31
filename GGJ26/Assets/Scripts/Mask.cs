@@ -52,6 +52,23 @@ public struct MaskVariant
     public EarVariants ears;
     public NoseVariants nose;
     public MouthVariants mouth;
+
+    public int CountMatchingFeatures(MaskVariant otherMask)
+    {
+        int count = 0;
+        // if (otherMask.hair == hair)
+        //     count++;
+        if (otherMask.eyes == eyes)
+            count++;
+        if (otherMask.ears == ears)
+            count++;
+        if (otherMask.nose == nose)
+            count++;
+        if (otherMask.mouth == mouth)
+            count++;
+
+        return count;
+    }
 }
 
 public class Mask : MonoBehaviour

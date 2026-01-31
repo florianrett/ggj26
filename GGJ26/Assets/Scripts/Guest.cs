@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Guest : MonoBehaviour
 {
@@ -11,11 +12,22 @@ public class Guest : MonoBehaviour
     
     private void OnMouseDown()
     {
-        Debug.Log("OnMouseDown");
+        // ignore mouse when it is hovering UI
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+        
+        Debug.Log("Clicked on guest");
+        
+        FindAnyObjectByType<GameMode>().OpenDialogMenu(mask.GetVariant());
     }
 
     public void SetMask(GameObject maskObject)
     {
         maskObject.transform.SetParent(maskLocation.transform, false);
+        mask = maskObject.GetComponent<Mask>();
+    }
+
+    public MaskVariant GetMaskVariant()
+    {
+        return mask.GetVariant();
     }
 }
