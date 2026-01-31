@@ -1,11 +1,14 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class GameMode : MonoBehaviour
 {
     [SerializeField] private GameObject room1;
     [SerializeField] private GameObject room2;
     [SerializeField] private DialogMenu dialogMenu;
+    [SerializeField] private Button roomButtonRight; 
+    [SerializeField] private Button roomButtonLeft; 
     [SerializeField] private MaskManager maskManager;
 
     private MaskVariant playerMask;
@@ -27,9 +30,28 @@ public class GameMode : MonoBehaviour
         int targetGuestIndex = UnityEngine.Random.Range(0, guests.Length);
         playerMask = guests[targetGuestIndex].GetMaskVariant();
         
-        room1.SetActive(true);
-        room2.SetActive(false);
+        roomButtonLeft.onClick.AddListener(delegate { ShowRoom(0); });
+        roomButtonRight.onClick.AddListener(delegate { ShowRoom(1); });
+        ShowRoom(0);
         dialogMenu.gameObject.SetActive(false);
+    }
+
+    public void ShowRoom(int room)
+    {
+        if (room == 0)
+        {
+            room1.SetActive(true);
+            room2.SetActive(false);
+            roomButtonLeft.gameObject.SetActive(false);
+            roomButtonRight.gameObject.SetActive(true);
+        }
+        else
+        {
+            room1.SetActive(false);
+            room2.SetActive(true);
+            roomButtonLeft.gameObject.SetActive(true);
+            roomButtonRight.gameObject.SetActive(false);
+        }
     }
 
     public void OpenDialogMenu(MaskVariant variant)
