@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class MaskManager : MonoBehaviour
 {
-    [SerializeField] GameObject maskPrefab;
+    [SerializeField] private GameObject maskPrefab;
     
     // Remaining available mask variants
     [SerializeField]
-    List<MaskVariant> remainingVariants;
+    private List<MaskVariant> remainingVariants;
 
     void Awake()
     {

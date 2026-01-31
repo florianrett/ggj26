@@ -4,8 +4,6 @@ using UnityEngine;
 public enum HairVariants
 {
     Variant1,
-    Variant2,
-    Variant3,
     [InspectorName(null)]
     MAX_VALUE
 }
@@ -58,9 +56,11 @@ public struct MaskVariant
 
 public class Mask : MonoBehaviour
 {
-
     [SerializeField]
-    MaskVariant _variant;
+    private MaskVariant variant;
+    
+    [SerializeField]
+    private MaskView maskView;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -68,26 +68,20 @@ public class Mask : MonoBehaviour
         UpdateView();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void UpdateView()
     {
-        gameObject.GetComponent<MaskView>().UpdateView(_variant);
+        maskView.UpdateView(variant);
     }
 
     public void SetVariant(MaskVariant inVariant)
     {
-        _variant = inVariant;
+        variant = inVariant;
         
         UpdateView();
     }
 
     public MaskVariant GetVariant()
     {
-        return _variant;
+        return variant;
     }
 }
