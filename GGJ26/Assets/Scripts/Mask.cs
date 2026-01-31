@@ -13,6 +13,7 @@ public enum EyeVariants
     Variant1,
     Variant2,
     Variant3,
+    Variant4,
     [InspectorName(null)]
     MAX_VALUE
 }
@@ -22,6 +23,7 @@ public enum EarVariants
     Variant1,
     Variant2,
     Variant3,
+    Variant4,
     [InspectorName(null)]
     MAX_VALUE
 }
@@ -31,6 +33,7 @@ public enum NoseVariants
     Variant1,
     Variant2,
     Variant3,
+    Variant4,
     [InspectorName(null)]
     MAX_VALUE
 }
@@ -40,6 +43,7 @@ public enum MouthVariants
     Variant1,
     Variant2,
     Variant3,
+    Variant4,
     [InspectorName(null)]
     MAX_VALUE
 }

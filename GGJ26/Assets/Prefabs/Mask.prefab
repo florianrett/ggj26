@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 9206a6eb5bab49746b0807adb656bd01, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -160,29 +160,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ce00cf0525266347b19d4c4cc1cd698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MaskVariations
-  hairSprite: {fileID: 8663131660763822280}
-  eyesSprite: {fileID: 4280275488010742974}
   earsSprite: {fileID: 8354428890842756722}
-  noseSprite: {fileID: 1709592058565576139}
+  eyesSprite: {fileID: 4280275488010742974}
+  hairSprite: {fileID: 8663131660763822280}
   mouthSprite: {fileID: 6441113947699925833}
-  hairVariations:
-  - {r: 1, g: 1, b: 1, a: 1}
-  eyeVariations:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
+  noseSprite: {fileID: 1709592058565576139}
   earVariations:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
-  noseVariations:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
+  - {fileID: 21300000, guid: 032e89d5c98e4054db67417b001073d3, type: 3}
+  - {fileID: 21300000, guid: e5621129fd6ad5c45ae7cda18a3a9ac6, type: 3}
+  - {fileID: 21300000, guid: dcd17ef958afad246888df28e63354cf, type: 3}
+  - {fileID: 21300000, guid: 62cde8d0fdd5ffc47849adb6dda3918c, type: 3}
+  eyeVariations:
+  - {fileID: 21300000, guid: c8a5f9c08836dec47b8937302124afde, type: 3}
+  - {fileID: 21300000, guid: d78b2ddf71a9b314e8a891348a5ab3e8, type: 3}
+  - {fileID: 21300000, guid: 45c93b28a9df65f4491f6658a99f9cee, type: 3}
+  - {fileID: 21300000, guid: 5ca518e006cb03f46a9a5d63f2c13eba, type: 3}
+  hairVariations:
+  - {fileID: 0}
   mouthVariations:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
+  - {fileID: 21300000, guid: 52186acddf77bff40b676abcac1df30d, type: 3}
+  - {fileID: 21300000, guid: 9206a6eb5bab49746b0807adb656bd01, type: 3}
+  - {fileID: 21300000, guid: 025f647e1aac6a74a9ceeddff5b23c17, type: 3}
+  - {fileID: 21300000, guid: fae50adb2bd08e84088a555c4bb295de, type: 3}
+  noseVariations:
+  - {fileID: 21300000, guid: efe3d4a3bb75c114d8f3b2129b47b7b7, type: 3}
+  - {fileID: 21300000, guid: 7b7a10f9b12d5014fb9f5269d71c0f98, type: 3}
+  - {fileID: 21300000, guid: 7a05430ee3e97884093317b424baed09, type: 3}
+  - {fileID: 21300000, guid: 7250990cebac9f843a399633c50eab55, type: 3}
 --- !u!1 &2358445689234540775
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +360,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 7b7a10f9b12d5014fb9f5269d71c0f98, type: 3}
-  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -447,7 +451,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: e5621129fd6ad5c45ae7cda18a3a9ac6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -538,7 +542,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: d78b2ddf71a9b314e8a891348a5ab3e8, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
