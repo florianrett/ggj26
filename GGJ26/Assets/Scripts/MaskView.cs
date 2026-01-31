@@ -4,17 +4,14 @@ public class MaskView : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer earsSprite;
     [SerializeField] private SpriteRenderer eyesSprite;
-    [SerializeField] private SpriteRenderer hairSprite;
     [SerializeField] private SpriteRenderer mouthSprite;
     [SerializeField] private SpriteRenderer noseSprite;
     
     [SerializeField] private Sprite[] earVariations;
     [SerializeField] private Sprite[] eyeVariations;
-    [SerializeField] private Sprite[] hairVariations;
     [SerializeField] private Sprite[] mouthVariations;
     [SerializeField] private Sprite[] noseVariations;
     
-    // [SerializeField] private Color[] hairVariations;
     // [SerializeField] private Color[] eyeVariations;
     // [SerializeField] private Color[] earVariations;
     // [SerializeField] private Color[] noseVariations;
@@ -35,7 +32,6 @@ public class MaskView : MonoBehaviour
 
     public void UpdateView(MaskVariant variant)
     {
-        hairSprite.sprite = hairVariations[(int)variant.hair];
         eyesSprite.sprite = eyeVariations[(int)variant.eyes];
         earsSprite.sprite = earVariations[(int)variant.ears];
         noseSprite.sprite = noseVariations[(int)variant.nose];

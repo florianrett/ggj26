@@ -7,11 +7,20 @@ public class GameMode : MonoBehaviour
     [SerializeField] private GameObject room1;
     [SerializeField] private GameObject room2;
     [SerializeField] private DialogMenu dialogMenu;
+    [SerializeField] private ScoreBoard scoreBoard;
     [SerializeField] private Button roomButtonRight; 
     [SerializeField] private Button roomButtonLeft; 
     [SerializeField] private MaskManager maskManager;
 
-    private MaskVariant playerMask;
+    [SerializeField] private MaskVariant playerMask;
+
+    [SerializeField] private int suspicionAny1 = 5;
+    [SerializeField] private int suspicionAny2 = 10;
+    [SerializeField] private int suspicionAny3 = 40;
+    [SerializeField] private int suspicionAllMatch = 50;
+    [SerializeField] private int suspicionDirect = 30;
+
+    private int score = 0;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -74,6 +83,33 @@ public class GameMode : MonoBehaviour
 
         return result;
     }
+
+    public int GetPenaltyForDialogOptions(DialogOptions option)
+    {
+        switch (option)
+        {
+            case DialogOptions.Ears:
+                return suspicionDirect;
+            case DialogOptions.Eyes:
+                return suspicionDirect;
+            case DialogOptions.Nose:
+                return suspicionDirect;
+            case DialogOptions.Mouth:
+                return suspicionDirect;
+            case DialogOptions.Any1:
+                return suspicionAny1;
+            case DialogOptions.Any2:
+                return suspicionAny2;
+            case DialogOptions.Any3:
+                return suspicionAny3;
+            case DialogOptions.All:
+                return suspicionAllMatch;
+            case DialogOptions.Exit:
+                return 0;
+        }
+
+        return 0;
+    }
     
     // Compare player mask with a specific NPC mask for a given dialog optiion
     private bool ComparePlayerMask(MaskVariant npcMask, DialogOptions option)
@@ -88,16 +124,12 @@ public class GameMode : MonoBehaviour
                 return npcMask.nose == playerMask.nose;
             case DialogOptions.Mouth:
                 return playerMask.mouth == npcMask.mouth;
-            case DialogOptions.Hair:
-                return npcMask.hair == playerMask.hair;
             case DialogOptions.Any1:
                 return playerMask.CountMatchingFeatures(npcMask) >= 1;
             case DialogOptions.Any2:
                 return playerMask.CountMatchingFeatures(npcMask) >= 2;
             case DialogOptions.Any3:
                 return playerMask.CountMatchingFeatures(npcMask) >= 3;
-            case DialogOptions.Any4:
-                return playerMask.CountMatchingFeatures(npcMask) >= 4;
             case DialogOptions.All:
                 return playerMask.CountMatchingFeatures(npcMask) >= 4;
         }
@@ -113,6 +145,12 @@ public class GameMode : MonoBehaviour
 
     private void HandlePunishment(DialogOptions option)
     {
-        
+        AddScore(GetPenaltyForDialogOptions(option));
+    }
+
+    private void AddScore(int value)
+    {
+        score += value;
+        scoreBoard.SetScore(score, value, true);
     }
 }
