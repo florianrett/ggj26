@@ -14,6 +14,7 @@ public class GameMode : MonoBehaviour
     [SerializeField] private GameObject tutorial;
     [SerializeField] private GameObject victoryScreen;
     [SerializeField] private GameObject gameOverScreen;
+    [SerializeField] private Mask victoryMask;
     
     [SerializeField] private MaskManager maskManager;
 
@@ -142,6 +143,7 @@ public class GameMode : MonoBehaviour
                 if (playerMask.CountMatchingFeatures(npcMask) >= 4)
                 {
                     victoryScreen.SetActive(true);
+                    victoryMask.SetVariant(playerMask);
                     return true;
                 }
 
