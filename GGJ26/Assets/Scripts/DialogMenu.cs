@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public enum DialogOptions
@@ -16,24 +17,24 @@ public enum DialogOptions
 public class DialogMenu : MonoBehaviour
 {
     [SerializeField] private Mask mask;
-    [SerializeField] private GameObject audiomanager;
 
-    private AudioManager audioManger;
-    private AudioSource responseaudiogood;
-    private AudioSource responseaudiobad;
+    [SerializeField] private GameObject responsePanel;
+    [SerializeField] private TextMeshProUGUI responseText;
+
+    [SerializeField] private string[] correctResponses;
+    [SerializeField] private string[] incorrectResponses;
+    
     private GameMode gameMode;
     
     void Start()
     {
-        audioManger = audiomanager.GetComponent<AudioManager>();
-        responseaudiogood = audiomanager.GetComponentInChildren<AudioSource>();
-        responseaudiobad = audiomanager.GetComponent<AudioSource>();
         gameMode = FindFirstObjectByType<GameMode>();
     }
     
     public void Open(MaskVariant maskVariant)
     {
         mask.SetVariant (maskVariant);
+        responsePanel.SetActive(false);
         gameObject.SetActive (true);
     }
 
@@ -41,18 +42,17 @@ public class DialogMenu : MonoBehaviour
     {
         if (gameMode.EvaluateDialogOption(dialogOption, mask.GetVariant()))
         {
-            // TODO: actual answer menu
-            Debug.Log("That was correct.");
-            
-            AudioManager.Instance.playaudioGood();
-            
+            ShowResponse(correctResponses[Random.Range(0, correctResponses.Length)]);
         }
         else
         {
-            Debug.Log("You are talking nonsense!");
-            audioManger.SetMusicVolume(20);
-            AudioManager.Instance.playaudioBad();
-            audioManger.SetMusicVolume(95);
+            ShowResponse(incorrectResponses[Random.Range(0, incorrectResponses.Length)]);
         }
+    }
+
+    private void ShowResponse(string response)
+    {
+        responsePanel.SetActive(true);
+        responseText.text = response;
     }
 }

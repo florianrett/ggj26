@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 52186acddf77bff40b676abcac1df30d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9206a6eb5bab49746b0807adb656bd01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -141,10 +141,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mask
   variant:
-    eyes: 0
-    ears: 3
-    nose: 2
-    mouth: 0
+    eyes: 2
+    ears: 2
+    nose: 3
+    mouth: 1
   maskView: {fileID: 3443591558166720196}
 --- !u!114 &3443591558166720196
 MonoBehaviour:
@@ -263,7 +263,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 7a05430ee3e97884093317b424baed09, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7250990cebac9f843a399633c50eab55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -354,7 +354,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 62cde8d0fdd5ffc47849adb6dda3918c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dcd17ef958afad246888df28e63354cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -445,7 +445,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: c8a5f9c08836dec47b8937302124afde, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 45c93b28a9df65f4491f6658a99f9cee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
