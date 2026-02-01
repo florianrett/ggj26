@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.44500732}
+  m_SizeDelta: {x: -100, y: -146.10997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8546481344656991756
 CanvasRenderer:
@@ -599,6 +599,16 @@ MonoBehaviour:
   mask: {fileID: 3188283762377247855}
   responsePanel: {fileID: 8318495310875522221}
   responseText: {fileID: 6820779744040943273}
+  correctResponses:
+  - How perceptive of you.
+  - Correct. I quite enjoy that feature.
+  - Yes! Don't we look fabulous?
+  incorrectResponses:
+  - I believe you're mistaken. Maybe you didn't pay attention to the details...
+  - Why would you say that?
+  - That couldn't be farther from the truth.
+  - Are you even supposed to be here?
+  - What a poor attempt at small-talk.
 --- !u!1 &6341557555329751838
 GameObject:
   m_ObjectHideFlags: 0

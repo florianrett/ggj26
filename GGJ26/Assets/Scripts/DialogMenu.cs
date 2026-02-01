@@ -20,6 +20,9 @@ public class DialogMenu : MonoBehaviour
 
     [SerializeField] private GameObject responsePanel;
     [SerializeField] private TextMeshProUGUI responseText;
+
+    [SerializeField] private string[] correctResponses;
+    [SerializeField] private string[] incorrectResponses;
     
     private GameMode gameMode;
     
@@ -39,11 +42,11 @@ public class DialogMenu : MonoBehaviour
     {
         if (gameMode.EvaluateDialogOption(dialogOption, mask.GetVariant()))
         {
-            ShowResponse("That was correct.");
+            ShowResponse(correctResponses[Random.Range(0, correctResponses.Length)]);
         }
         else
         {
-            ShowResponse("You are talking nonsense!");
+            ShowResponse(incorrectResponses[Random.Range(0, incorrectResponses.Length)]);
         }
     }
 
