@@ -43,10 +43,12 @@ public class DialogMenu : MonoBehaviour
         if (gameMode.EvaluateDialogOption(dialogOption, mask.GetVariant()))
         {
             ShowResponse(correctResponses[Random.Range(0, correctResponses.Length)]);
+            AudioManager.Instance.playaudioGood();
         }
         else
         {
             ShowResponse(incorrectResponses[Random.Range(0, incorrectResponses.Length)]);
+            AudioManager.Instance.playaudioBad();
         }
     }
 
