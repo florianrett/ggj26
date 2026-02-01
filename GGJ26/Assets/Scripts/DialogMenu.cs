@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public enum DialogOptions
@@ -17,6 +18,9 @@ public class DialogMenu : MonoBehaviour
 {
     [SerializeField] private Mask mask;
 
+    [SerializeField] private GameObject responsePanel;
+    [SerializeField] private TextMeshProUGUI responseText;
+    
     private GameMode gameMode;
     
     void Start()
@@ -27,6 +31,7 @@ public class DialogMenu : MonoBehaviour
     public void Open(MaskVariant maskVariant)
     {
         mask.SetVariant (maskVariant);
+        responsePanel.SetActive(false);
         gameObject.SetActive (true);
     }
 
@@ -34,12 +39,17 @@ public class DialogMenu : MonoBehaviour
     {
         if (gameMode.EvaluateDialogOption(dialogOption, mask.GetVariant()))
         {
-            // TODO: actual answer menu
-            Debug.Log("That was correct.");
+            ShowResponse("That was correct.");
         }
         else
         {
-            Debug.Log("You are talking nonsense!");
+            ShowResponse("You are talking nonsense!");
         }
+    }
+
+    private void ShowResponse(string response)
+    {
+        responsePanel.SetActive(true);
+        responseText.text = response;
     }
 }
