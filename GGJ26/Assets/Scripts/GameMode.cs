@@ -4,8 +4,9 @@ using UnityEngine.UI;
 
 public class GameMode : MonoBehaviour
 {
-    [SerializeField] private GameObject room1;
-    [SerializeField] private GameObject room2;
+    [SerializeField] private GameObject roomLeft;
+    [SerializeField] private GameObject roomMiddle;
+    [SerializeField] private GameObject roomRight;
     [SerializeField] private DialogMenu dialogMenu;
     [SerializeField] private ScoreBoard scoreBoard;
     [SerializeField] private Button roomButtonRight; 
@@ -24,13 +25,16 @@ public class GameMode : MonoBehaviour
     [SerializeField] private int suspicionAllMatch = 50;
     [SerializeField] private int suspicionDirect = 30;
 
+    private int currentRoom = 1;
     private int score = 0;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        room1.SetActive(true);
-        room2.SetActive(true);
+        // Enable all rooms so all guest objects are active for initialization
+        roomLeft.SetActive(true);
+        roomMiddle.SetActive(true);
+        roomRight.SetActive(true);
 
         Guest[] guests = FindObjectsByType<Guest>(FindObjectsSortMode.None);
 
@@ -43,10 +47,11 @@ public class GameMode : MonoBehaviour
         int targetGuestIndex = UnityEngine.Random.Range(0, guests.Length);
         playerMask = guests[targetGuestIndex].GetMaskVariant();
         
-        roomButtonLeft.onClick.AddListener(delegate { ShowRoom(0); });
-        roomButtonRight.onClick.AddListener(delegate { ShowRoom(1); });
-        ShowRoom(0);
+        roomButtonLeft.onClick.AddListener(delegate { ShowRoom(currentRoom - 1); });
+        roomButtonRight.onClick.AddListener(delegate { ShowRoom(currentRoom + 1); });
+        ShowRoom(1);
         dialogMenu.gameObject.SetActive(false);
+        scoreBoard.gameObject.SetActive(true);
         victoryScreen.SetActive(false);
         gameOverScreen.SetActive(false);
         tutorial.SetActive(true);
@@ -54,20 +59,16 @@ public class GameMode : MonoBehaviour
 
     public void ShowRoom(int room)
     {
-        if (room == 0)
-        {
-            room1.SetActive(true);
-            room2.SetActive(false);
-            roomButtonLeft.gameObject.SetActive(false);
-            roomButtonRight.gameObject.SetActive(true);
-        }
-        else
-        {
-            room1.SetActive(false);
-            room2.SetActive(true);
-            roomButtonLeft.gameObject.SetActive(true);
-            roomButtonRight.gameObject.SetActive(false);
-        }
+        if (room is < 0 or > 2)
+            return;
+        currentRoom = room;
+        
+        roomLeft.SetActive(room == 0);
+        roomMiddle.SetActive(room == 1);
+        roomRight.SetActive(room == 2);
+        
+        roomButtonLeft.gameObject.SetActive(room != 0);
+        roomButtonRight.gameObject.SetActive(room != 2);
     }
 
     public void OpenDialogMenu(MaskVariant variant)
