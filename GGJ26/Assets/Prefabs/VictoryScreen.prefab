@@ -337,10 +337,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Well Done!
-
-
-    You''ve found the right person!'
+  m_text: You found your partner and together you successfully escape the masquerade.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 50e29a11a0c486c44b41325710084930, type: 2}
   m_sharedMaterial: {fileID: -1892274508850715260, guid: 50e29a11a0c486c44b41325710084930, type: 2}
