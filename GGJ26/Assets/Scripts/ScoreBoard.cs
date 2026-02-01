@@ -7,6 +7,7 @@ public class ScoreBoard : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private Image scoreBar;
+    [SerializeField] private Slider scoreSlider;
     void Awake()
     {
         SetScore(0, 0, false);
@@ -23,5 +24,6 @@ public class ScoreBoard : MonoBehaviour
 
         scoreText.text = "Sus Level: " + actualScore.ToString() + "%";
         scoreBar.fillAmount = actualScore / 100.0f;
+        scoreSlider.value = actualScore * 0.01f;
     }
 }
