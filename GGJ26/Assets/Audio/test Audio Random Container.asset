@@ -1,43 +1,43 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1233149941 &-5661178077757617697
+--- !u!1233149941 &-8162764878167684769
 AudioContainerElement:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: IMSLP290413-PMLP254161-Haendel_Air_HMV467-Stephan_{-5661178077757617697}
-  m_AudioClip: {fileID: 8300000, guid: 9599e9e62394c6842a586efade580e5b, type: 3}
+  m_Name: qubodupItemHandling5_{-8162764878167684769}
+  m_AudioClip: {fileID: 8300000, guid: 547bd9e9c19e86c4582d4186c696bafa, type: 3}
   m_Volume: 0
   m_Enabled: 1
---- !u!1233149941 &-5517174860779411169
+--- !u!1233149941 &-7039508136486657207
 AudioContainerElement:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: IMSLP406817-PMLP254161-HanHWV467aSco_midi_cc4_{-5517174860779411169}
-  m_AudioClip: {fileID: 8300000, guid: 8f1486b967deff64ea6d6dbcb5b2d232, type: 3}
+  m_Name: qubodupItemHandling2_{-7039508136486657207}
+  m_AudioClip: {fileID: 8300000, guid: 4b745d396f1129f4c837d480a6a5a151, type: 3}
   m_Volume: 0
   m_Enabled: 1
---- !u!1233149941 &-391596394874786877
+--- !u!1233149941 &-3265332593637825661
 AudioContainerElement:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: IMSLP604508-PMLP970169-AMaskSco_midi_cc3_{-391596394874786877}
-  m_AudioClip: {fileID: 8300000, guid: 05c03b4ede4a92a47b1bae46d0f63da9, type: 3}
+  m_Name: qubodupItemHandling4_{-3265332593637825661}
+  m_AudioClip: {fileID: 8300000, guid: 32b54bb630ca0e04f8e6b3bc66f0c586, type: 3}
   m_Volume: 0
   m_Enabled: 1
---- !u!1233149941 &3154674312021643540
+--- !u!1233149941 &23793727260783835
 AudioContainerElement:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: IMSLP311364-PMLP341743-Poglietti,_Alessandro_-_Ricercare_midiLauten_{3154674312021643540}
-  m_AudioClip: {fileID: 8300000, guid: e75d029fe8589844d88d1eaed4f61005, type: 3}
+  m_Name: qubodupItemHandling3_{23793727260783835}
+  m_AudioClip: {fileID: 8300000, guid: 63eea845618be2c4f88d00b7e4b34022, type: 3}
   m_Volume: 0
   m_Enabled: 1
 --- !u!1307931743 &6418180475301049370
@@ -46,8 +46,8 @@ AudioRandomContainer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Audio Random Container
-  m_Volume: -7
+  m_Name: test Audio Random Container
+  m_Volume: 0
   m_Pitch: 0
   m_AutomaticTriggerTime: 0
   m_LoopCount: 1
@@ -56,10 +56,11 @@ AudioRandomContainer:
   m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
   m_LoopCountRandomizationRange: {x: 0, y: 0}
   m_Elements:
-  - {fileID: -5661178077757617697}
-  - {fileID: 3154674312021643540}
-  - {fileID: -5517174860779411169}
-  - {fileID: -391596394874786877}
+  - {fileID: 7804552955568635297}
+  - {fileID: -7039508136486657207}
+  - {fileID: 23793727260783835}
+  - {fileID: -3265332593637825661}
+  - {fileID: -8162764878167684769}
   m_AvoidRepeatingLast: 1
   m_PlaybackMode: 2
   m_TriggerMode: 1
@@ -69,3 +70,13 @@ AudioRandomContainer:
   m_PitchRandomizationEnabled: 0
   m_AutomaticTriggerTimeRandomizationEnabled: 0
   m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &7804552955568635297
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: qubodupItemHandling1_{7804552955568635297}
+  m_AudioClip: {fileID: 8300000, guid: 29af5e7693202fa48a18dd7c95118fb3, type: 3}
+  m_Volume: 0
+  m_Enabled: 1

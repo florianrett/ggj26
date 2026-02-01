@@ -16,11 +16,18 @@ public enum DialogOptions
 public class DialogMenu : MonoBehaviour
 {
     [SerializeField] private Mask mask;
+    [SerializeField] private GameObject audiomanager;
 
+    private AudioManager audioManger;
+    private AudioSource responseaudiogood;
+    private AudioSource responseaudiobad;
     private GameMode gameMode;
     
     void Start()
     {
+        audioManger = audiomanager.GetComponent<AudioManager>();
+        responseaudiogood = audiomanager.GetComponentInChildren<AudioSource>();
+        responseaudiobad = audiomanager.GetComponent<AudioSource>();
         gameMode = FindFirstObjectByType<GameMode>();
     }
     
@@ -36,10 +43,16 @@ public class DialogMenu : MonoBehaviour
         {
             // TODO: actual answer menu
             Debug.Log("That was correct.");
+            
+            AudioManager.Instance.playaudioGood();
+            
         }
         else
         {
             Debug.Log("You are talking nonsense!");
+            audioManger.SetMusicVolume(20);
+            AudioManager.Instance.playaudioBad();
+            audioManger.SetMusicVolume(95);
         }
     }
 }
